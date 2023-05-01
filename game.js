@@ -1,18 +1,12 @@
-/**
- * 1. set up a function called game loop.
- game loop is a function that repeats itself over and over again 
- on a set interval so i can constantly update my 
- snake position and snake position and do all of 
- the game calculations that i need on a very set time.
- */
+let lastRenderTime = 0// default time of my last render
 
- function main(currentTime) {//function takes in the current time of when the function runs
+ function main(currentTime) {
 
-    window.requestAnimationFrame(main)//this request tells me when i can render my next frame and tells me the current time when i go to render that frame.
-    //then recall the main function immediately so i can setup another loop
-    // that will happen after this.
-    // my main function will loop over and over again forever that is the whole purpose of a game loop.
+    window.requestAnimationFrame(main)
+    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
+    // number of seconds since last rendered divided by 1000 milliseconds
+    lastRenderTime = currentTime //updates my last render time with my current time.
     console.log(currentTime)
  }
 
- window.requestAnimationFrame(main)// im calling this loop to start the loop for the first time
+ window.requestAnimationFrame(main)
