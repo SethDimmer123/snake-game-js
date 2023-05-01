@@ -4,6 +4,7 @@ import { SNAKE_SPEED,update as updateSnake,draw as drawSnake, update } from "./s
 // to make sure everything is working check console log to see if 'render' is in console.
 
 let lastRenderTime = 0
+const gameBoard = document.getElementById('game-board')
 
 // const SNAKE_SPEED = 2 
 
@@ -31,5 +32,5 @@ let lastRenderTime = 0
  }
 
  function draw() {// drawing snake and food
-    drawSnake()
+    drawSnake(gameBoard)
  }

@@ -12,11 +12,19 @@ export function update() {
     console.log('update snake');
 }
 
-export function draw(gameboard) { 
-    snakeBody.forEach(segments => {
-    //forEach lets me loop through the different pieces of the snake(segments)
-    //each piece of the snake i want to loop through
-    // i need t draw it to my gameboard so i can add my snake to the gameBoard 
+export function draw(gameBoard) { // i need to add my gameBoard passed into the draw function so i can add my snake to the gameBoard.
+    snakeBody.forEach(segment => { //segment is just each piece of the snake i want to loop through
+    const snakeElement = document.createElement('div')
+    // i am creating a div element and have it go
+    //  inside of my gameBoard at a PARTICULAR X,Y coordinate.
+    
+    // since i am using grid i can directly 
+    // set the x,y coordinate very easily 
+
+    snakeElement.style.gridRowStart = segment.x
+    snakeElement.style.gridColumnStart = segment.y
+    snakeElement.classList.add('snake')
+    gameBoard.appendChild(snakeElement)
 
     })
 }
