@@ -3,6 +3,8 @@
 import { SNAKE_SPEED,update as updateSnake,draw as drawSnake, update } from "./snake.js"
 // to make sure everything is working check console log to see if 'render' is in console.
 
+import { update as updateFood, draw as drawFood } from './food.js'
+
 let lastRenderTime = 0
 const gameBoard = document.getElementById('game-board')
 
@@ -18,7 +20,6 @@ const gameBoard = document.getElementById('game-board')
     // console.log('render')
     lastRenderTime = currentTime 
 
-    //logic for my game 
 
     Update()
 
@@ -29,9 +30,11 @@ const gameBoard = document.getElementById('game-board')
 
  function Update() {//updating snake and food
     updateSnake()// calling this function in my main update function
+    updateFood()
  }
 
  function draw() {// drawing snake and food
     gameBoard.innerHTML = ''// my snake will move without actually showing previous pieces behind it.
     drawSnake(gameBoard)
+    drawFood(gameBoard)
  }
