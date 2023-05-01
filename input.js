@@ -26,3 +26,7 @@ window.addEventListener('keydown',e => {
 export function getInputDirection() {
     return inputDirection
 }
+
+//i cannot reverse my snake onto itself from my previous input 
+
+// so i need to setup some checks to make sure that does not happen
