@@ -32,6 +32,6 @@ const gameBoard = document.getElementById('game-board')
  }
 
  function draw() {// drawing snake and food
-    gameBoard.innerHTML = ''
+    gameBoard.innerHTML = ''// my snake will move without actually showing previous pieces behind it.
     drawSnake(gameBoard)
  }
