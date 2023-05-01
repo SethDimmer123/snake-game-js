@@ -1,3 +1,5 @@
+// render code setup
+
 let lastRenderTime = 0// default time of my last render
 
 const SNAKE_SPEED = 2 // this will be how many times the snake moves per second
