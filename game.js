@@ -32,5 +32,6 @@ const gameBoard = document.getElementById('game-board')
  }
 
  function draw() {// drawing snake and food
+    gameBoard.innerHTML = ''
     drawSnake(gameBoard)
  }
