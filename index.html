@@ -18,8 +18,9 @@
 
         #game-board{
             background-color: #CCC;
-            width: 100vmin;
+            width: 100vmin;/*takes whatever direction is going to be the narrowest vmin is width on smaller screen*/
             height: 100vmin;
+            /* but when i go to larger screen vmin is my height because my height has the shortest width */
             display: grid;
             grid-template-rows: repeat(21,1fr);/*21 rows evenly split*/
             grid-template-columns: repeat(21,1fr);/*21 columns evenly split*/
