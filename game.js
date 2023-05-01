@@ -14,7 +14,7 @@ let lastRenderTime = 0
     if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
 
 
-    console.log('render')
+    // console.log('render')
     lastRenderTime = currentTime 
 
     //logic for my game 
@@ -31,5 +31,5 @@ let lastRenderTime = 0
  }
 
  function draw() {// drawing snake and food
-
+    drawSnake()
  }
