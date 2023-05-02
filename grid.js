@@ -10,3 +10,20 @@ return {// x will be based on a formula for calculating a random number between 
     // returns to me a new x and y value for my grid
 }
 }
+
+
+// outside grid 1.
+export function outsideGrid(position) {
+    // checking to see if the position that i pass in will
+    //  be greater than my grid size which is 21 or less than 1 
+    // which is my minimum grid size.
+
+
+    return (//less than 1 
+        position.x < 1 || position .x > GRID_SIZE || 
+        position.y < 1 || position.y > GRID_SIZE
+    )
+    // if i am anywhre outside my grid this will return true 
+    // otherwise it will return false
+
+}

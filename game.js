@@ -1,9 +1,11 @@
 // render code setup
 
-import { SNAKE_SPEED,update as updateSnake,draw as drawSnake, update } from "./snake.js"
+import { SNAKE_SPEED,update as updateSnake,draw as drawSnake, update, getSnakeHead,
+snakeIntersection } from "./snake.js"
 // to make sure everything is working check console log to see if 'render' is in console.
 
 import { update as updateFood, draw as drawFood } from './food.js'
+import { outsideGrid } from "./grid.js"
 
 let lastRenderTime = 0
 let gameOver = false 
@@ -56,3 +58,9 @@ const gameBoard = document.getElementById('game-board')
     
     //these are the 2 functions i will create 
  }
+
+//  i need to implement the outside grid, snake intersection, and getSnakeHead
+
+// 1.outside grid 
+// 2. snake intersection
+// 3. getSnakeHead
