@@ -17,7 +17,12 @@ const gameBoard = document.getElementById('game-board')
     // doing game over state 
 
     if(gameOver) {
-        return alert('you lose')
+        if(confirm('You lost. Press ok to restart.')) {
+            window.location = '/'//if this returns true i want to reset the game
+        }
+        return 
+        //if someone does not press ok and just exit out by hitting cancel 
+        // i do not want to continue to run the game i want the game to be stopped. 
     }
 
     window.requestAnimationFrame(main) 
