@@ -56,5 +56,5 @@ function addSegments() {
         snakeBody.push({...snakeBody[snakeBody.length - 1] })
     }
 
-    newSegments = 0 // i am getting rid of my new segments meaning it will only add the segment it eats 
+    newSegments = 0 
 }
