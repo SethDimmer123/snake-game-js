@@ -10,6 +10,9 @@ import { getInputDirection } from "./input.js"
 
 
 export function update() { 
+    addSegments(
+
+    )
     const inputDirection = getInputDirection()
     for (let i = snakeBody.length - 2; i >= 0; i--) { 
         snakeBody[i + 1] = { ...snakeBody[i] }
@@ -40,18 +43,22 @@ export function expandSnake(amount) {
     newSegments += amount 
 }
 
-export function onSnake(position) { // takes in a position and determines if this position is on my snake
-    return snakeBody.some(segment => {// IF my equal positions returns true for any of the snake positions(definition of SOME method) 
-        // for each segment i am checking if the segment is on my snake 
-        // so i compare my position with my segment position to see if they are equal.
+export function onSnake(position) { 
+    return snakeBody.some(segment => {
         return equalPositions(segment, position)
     })
-    // if any part of my snakeBody equals the position i pass in then onSnake will return true. 
 }
 
 function equalPositions(pos1,pos2) {
     return pos1.x === pos2.x && pos1.y === pos2.y
-    //if my 2 positions are exactly the same 
-    // then the equalPositions will return TRUE 
-    
+}
+
+function addSegments() {
+    for (let i = 0; i < newSegments; i++) {
+        snakeBody.push({...snakeBody[snakeBody.length - 1] })
+        // i am taking very last element of my snake and 
+        // duplicating it onto the end of my snake. 
+        // if my snake is currently 1 position then it will duplicate that 1 position 
+        // as my snake moves it will slowly expand itself outwards.
+    }
 }
