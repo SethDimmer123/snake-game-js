@@ -10,7 +10,6 @@ export function update() {
 if(onSnake(food)) {//
     expandSnake(EXPANSION_RATE)//EXPANDING SNAKE BY 1 
     food = getRandomFoodPosition()
-
 }
 }
 
@@ -23,10 +22,9 @@ export function draw(gameBoard) {
 }
 
 
-function getRandomFoodPosition() { //returns a new position for my food every time it gets eaten and returns a position that is not already on the snake. 
+function getRandomFoodPosition() { 
     let newFoodPosition
     while (newFoodPosition == null || onSnake(newFoodPosition)) {
-//currently whenever my food is null or my food is on the snake already then i need to get a new food position
 newFoodPosition = randomGridPosition()
     }
     return newFoodPosition
