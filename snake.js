@@ -1,10 +1,11 @@
 import { getInputDirection } from "./input.js"
 
-// all the code for my snake goes
+// all the code for my snake goes here
  export const SNAKE_SPEED = 5
 
  const snakeBody = [{ x:11, y:11 }]
- let newSegments = 0 //defaulting to zero because my snake is not growing without eating food.
+ let newSegments = 0 
+ //defaulting to zero because my snake is not growing without eating food.
 
 
 
